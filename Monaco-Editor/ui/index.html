@@ -85,14 +85,15 @@
         }
 
         .headerbutton::after {
-            background: linear-gradient(to right, transparent 0%, rgb(109, 109, 109) 20%, snow 50%,  rgb(109, 109, 109) 80%, transparent 100%);
+            background: linear-gradient(to right, transparent 0%, rgb(109, 109, 109) 30%, snow 50%,  rgb(109, 109, 109) 70%, transparent 100%);
             height: 2px;
             opacity: 0;
+            transition: opacity 1.5s ease;
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
-            transition: opacity 2s ease;
+            width: 100%;
         }
 
         .headerbutton:hover {
@@ -104,34 +105,10 @@
             opacity: 1;
         }
 
-        .headerbuttonweb {
-            color: snow; 
-            text-decoration: none;
-            align-items: center;
-            min-width: 60px;
-            height: 35px; 
+        .headerbutton.active {
+            color: snow;
             border-radius: 12px;
-            padding: 0 10px;
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            background: transparent; 
-            white-space: nowrap;
-            transition: transform 0.2s ease;
-        }
-
-        .headerbuttonweb::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 3px;
-            width: 100%;
-            background: linear-gradient(to right, white 100%)
-        }
-
-        .headerbuttonweb:hover {
-            transform: translateY(-2px);
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.2) 1%, transparent 100%);
         }
 
         .bottom {
@@ -386,7 +363,7 @@
             border-radius: 2px;
         }
 
-        @media (max-width: 600px) {
+        /*@media (max-width: 600px) {
             .container {
                 width: 70%;
                 margin: 0 auto;
@@ -405,7 +382,7 @@
             .box {
                 padding: 0 10px;
             }
-        }
+        } */
 
         .search-bar {
             margin: 20px auto;
@@ -471,6 +448,40 @@
         .osbutton.active {
             background: linear-gradient(to right, rgba(255, 255, 255, 0.2) 1%, transparent 100%);
         }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            .download-card {
+                width: 90%;
+            }
+
+            .header {
+                font-size: 14px;
+                height: 50px;
+                padding: 0 10px;
+            }
+
+            .bottom {
+                height: 60px;
+                font-size: 14px;
+            }
+
+            .headerbutton {
+                font-size: 12px;
+                padding: 5px;
+            }
+
+            .download-button, .download-button1, .download-button2 {
+                width: 100%;
+                padding: 8px;
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -480,9 +491,9 @@
     <div class="container-wrapper">
     <div class="header">
         <strong>Executor Android + Ios</strong>
-        <a href="#" style="margin-left: 27%;" class="headerbutton">Home</a>
-        <a href="#" style="margin-left: 15px" class="headerbuttonweb">Executor</a>
-        <a href="#" style="margin-left: 15px" class="headerbutton">Bypass</a>
+        <a href="#" style="margin-left: 27%;" class="headerbutton" id="home">Home</a>
+        <a href="#" style="margin-left: 15px" class="headerbutton active" id="executor">Executor</a>
+        <a href="#" style="margin-left: 15px" class="headerbutton" id="bypass" onclick="osbuttonactive('bypass')">Bypass</a>
         <strong class="dropdown" style="margin-left: 33%">
             <a class="dropbtn" onclick="toggleDropdown()"><img src="https://files.catbox.moe/nc0cya.png" alt="arceus"></a>
             <div class="dropdown-content" id="myDropdown" style="margin-right: 30%;">
@@ -510,7 +521,7 @@
 
         <div class="container2" id="android-container">
 
-            <div class="line" id="android-line"><strong style="margin-left: 1%;">Android</strong></div>
+            <div class="line" id="android-line"><strong style="margin-left: 1%;">Kontol Kaget Luhhhh 🗿</strong></div>
 
             <div class="download-card">
             <img src="https://files.catbox.moe/ynxoab.png" alt="arceus">
@@ -718,6 +729,20 @@
             document.getElementById('ios-line').style.display = iosLineVisible ? "" : "none";
             document.getElementById('admin-line').style.display = adminLineVisible ? "" : "none";
             document.getElementById('line-line').style.display = lineLineVisible ? "" : "none";
+        }
+
+        function osbuttonactive(type) {
+            var homeButton = document.getElementById('home');
+            var executorButton = document.getElementById('executor');
+            var bypassButton = document.getElementById('bypass');
+
+            if (type == 'home'){
+                
+            } else if (type == 'executor') {
+                
+            } else if (type == 'bypass') {
+                
+            }
         }
 
         function filterExecutors(type) {
