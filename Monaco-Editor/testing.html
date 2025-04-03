@@ -1,1 +1,115 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Dropdown Switch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .search-bar input {
+            padding: 8px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .osbutton-container, .oscontainer {
+            display: flex;
+            gap: 10px;
+        }
+        .osbutton {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .osdropdown {
+            position: relative;
+        }
+        .osdropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .osdropdown:hover .osdropdown-content {
+            display: block;
+        }
+        .osdropdown-content a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function isMobile() {
+            return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.getElementById("os-container");
+            
+            if (isMobile()) {
+                container.innerHTML = `
+                    <div class="search-bar">
+                        <input id="searchInput" onkeyup="searchExecutors()" placeholder="Search Name Executor Here" type="text"/>
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="oscontainer">
+                        <div class="osdropdown">
+                            <a id="mainButton"><strong>All</strong></a>
+                            <div class="osdropdown-content" id="osdropdown-menu">
+                                <a onclick="showButton('Android'); filterExecutors('android')"><strong>Android</strong></a>
+                                <a onclick="showButton('Ios'); filterExecutors('ios')"><strong>Ios</strong></a>
+                                <a onclick="showButton('Admin'); filterExecutors('admin')"><strong>Admin</strong></a>
+                            </div>
+                        </div>
+                        <button class="osdropdownbutton" onclick="toggleOsDropdown()">
+                            <img src="https://files.catbox.moe/wsmps3.png" style="width: 29px; height: 29px; border: 1px solid snow;"/>
+                        </button>
+                    </div>`;
+            } else {
+                container.innerHTML = `
+                    <div style="width: 100%; height: auto; margin-top: 2%;">
+                        <div class="search-bar">
+                            <input id="searchInput" onkeyup="searchExecutors()" placeholder="Search Name Executor Or Executor Version" type="text"/>
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="osbutton-container">
+                            <button class="osbutton active" id="allButton" onclick="filterExecutors('all')">All</button>
+                            <button class="osbutton" id="androidButton" onclick="filterExecutors('android')">Android</button>
+                            <button class="osbutton" id="iosButton" onclick="filterExecutors('ios')">Ios</button>
+                            <button class="osbutton" id="adminButton" onclick="filterExecutors('admin')">Admin</button>
+                        </div>
+                    </div>`;
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="os-container">
+        <!-- Content will be injected here by script -->
+    </div>
+</body>
+</html>
