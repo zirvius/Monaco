@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Executor Roblox</title>
+    <meta name="description" content="idk" />
+    <meta name="keywords" content="executor" />
+    <meta name="author" content="gatau" />
+    <link rel="icon" type="image/png" href="https://files.catbox.moe/qijhy9.png">
+    <meta property="og:title" content="All Executor Roblox" />
+    <meta property="og:description" content="idk" />
+    <meta property="og:image" content="https://files.catbox.moe/qijhy9.png" />
+    <meta property="og:url" content="https://zirviussite.my.id" />
+    <meta name="google-adsense-account" content="ca-pub-4557211808197852">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4557211808197852" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative; 
+}
+
+.ads-container {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    background: transparent;
+}
+
+body::-webkit-scrollbar-track {
+    display: none;
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    display: none;
+    background: transparent;
+}
+
+body::-webkit-scrollbar-button {
+    display: none;
+    background: transparent;
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.notification-container {
+    position: fixed;
+    top: 4%;
+    right: 1.8%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: Roboto !important;
+    font-weight: 300 !important;
+    font-size: 100% !important;
+}
+
+.notification {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  color: snow;
+  border: 1.8px solid snow;
+  backdrop-filter: blur(5px);
+  padding: 4% 4%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  max-width: 330px;
+  opacity: 0;
+  transform: translate(100%, 0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.notification-container.show {
+    z-index: 9999;
+}
+.notification.show {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.notification.hide {
+  opacity: 0;
+  transform: translate(100%, 0);
+}
+
+.notification.move-up {
+  transform: translate(0, -100%);
+}
+
+.notification.hide-up {
+  transform: translate(100%, -100%);
+}
+
+.notification a {
+    color: snow;
+    text-decoration-color: 1.5px solid snow;
+}
+
+.container-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.header {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 350;
+    width: 100%;
+    height: 9%;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    color: snow;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 0.1px solid snow;
+    opacity: 10;
+    text-shadow: 0 0 10px snow, 0 0 50px transparent;
+}
+
+.header a {
+    font-family: roboto;
+    font-size: bold;
+    font-weight: 200;
+}
+
+.bottom {
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: 320;
+    width: 100%;
+    height: 4%;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    color: snow;
+    display: flex;
+    align-items: center;
+    padding: 0 1%;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-top: 0.1px solid snow;
+    opacity: 10;
+    text-shadow: 0 0 3px snow, 0 0 20px transparent;
+}
+
+.line {
+    font-family: roboto;
+    font-weight: 400;
+    font-size: 40px;
+    width: 100%;
+    height: 55px;
+    background: transparent;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5%;
+    text-shadow: 0 0 4px snow, 0 0 50px transparent;
+}
+
+.line::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent 0%, rgb(109, 109, 109) 20%, snow 50%,  rgb(109, 109, 109) 80%, transparent 100%);
+}
+
+.container {
+    max-width: 1333px;
+    min-width: 1333px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.container2 {
+    width: 79.3%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+}
+
+.download-card {
+    font-family: roboto;
+    background-color: rgba(37, 37, 37, 0.7);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    padding: 1.9%;
+    width: 19.4%;
+    height: 22.5%;
+    text-align: center;
+    color: snow;
+    border-color: 5px solid black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid snow;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-card:hover {
+    transform: scale(1.04);
+    transform-origin: center;
+    box-shadow: 0 0 12px 12px snow;
+}
+
+.download-card img {
+    width: 100%;
+    height: 56%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.download-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(37, 37, 37, 0.7);
+    color: snow;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 5px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    text-decoration: none;
+    border: 2px solid snow;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-button:hover {
+  padding: 12px 5px;
+  background-color: #0a0a0a;
+  border: snow;
+  box-shadow: 0 0 10px 5px snow;
+}
+
+.download-button1, .download-button2 {
+  background-color: #0cf7ff;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  width: 90px;
+  height: 20px;
+  padding: 10px 5px;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid red;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-button1:hover, .download-button2:hover {
+  padding: 13px 8px;
+  color: rgb(255, 0, 0);
+  background-color: #0a0a0a;
+  border: #0cf7ff;
+  box-shadow: 0 0 15px 10px rgba(255, 0, 0, 0.7);
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.sidebar {
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
+    backdrop-filter: blur(var(--blur-xs)); 
+    width: 70px;
+    height: 57px;
+    z-index: 1000;
+}
+
+.sidebarbtn {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: none;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    width: auto;
+    padding: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.5s ease;
+    right: auto;
+    left: -1px;
+    background: transparent;
+    backdrop-filter: blur(-5px);
+    width: 70px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebarbtn img {
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    background-color: none;
+}
+
+.sidebarbtn:hover {
+    color: #ff0b0b;
+} 
+
+.sidebar-content {
+    display: block;
+    position: fixed;
+    width: 250px;
+    height: 590px;
+    border-right: 1px solid snow;
+    border-bottom: 1px solid snow;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 1s ease; 
+    transform: translateX(-100px);
+    opacity: 0;
+    z-index: 1000;
+    top: -50000000px;
+    left: -6348987659876554321%;
+}
+.sidebar-content.show {
+    display: block;
+    position: fixed;
+    max-height: 1000px;
+    opacity: 1;
+    transform: translateX(0);
+    left: 0;
+    top: 55px;
+}
+
+.sidebar-content a {
+    font-family: roboto;
+    font-weight: 400;
+    color: snow;
+    background: transparent;
+    padding: 10px 10px;
+    text-decoration: none;
+    margin: 0;
+    transition: color 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    gap: 10px;
+    text-shadow: 0 0 2px snow, 0 0 50px transparent;
+}
+
+.sidebar-content a img {
+    width: 30px;
+    height: 30px;
+}
+
+.sidebar-content a.active {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2) 1%, transparent 100%);
+}
+
+.sidebar-content a::after {
+    background: linear-gradient(to right, transparent 0%, rgb(109, 109, 109) 30%, snow 50%,  rgb(109, 109, 109) 70%, transparent 100%);
+    height: 3px;
+    opacity: 0;
+    transition: opacity 1s ease;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.sidebar-content a:hover::after{
+    opacity: 1;
+}
+
+/*@media (max-width: 600px) {
+    .container {
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 80px;
+    }
+
+    .download-card {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .download-card:hover {
+        width: 80%;
+    }
+
+    .box {
+        padding: 0 10px;
+    }
+} */
+
+.search-bar {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1000px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid snow;
+    backdrop-filter: blur(5px);
+}
+.search-bar input {
+    width: 95%;
+    font-family: fredoka;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 18px;
+    border: none;
+    outline: none;
+    font-size: 16px;            
+    background: transparent;
+    color: snow;
+}
+.search-bar i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #e4e4e4;
+}
+
+.osbutton-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; 
+    width: 100%;
+    padding: 10px;
+}
+
+.osbutton{
+    background: transparent;
+    backdrop-filter: blur(5px);
+    color: snow;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    width: 90px;
+    height: 33px;
+    padding: 10px 5px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid snow;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    text-shadow: 0 0 4px snow, 0 0 50px transparent;
+}
+
+.osbutton.active {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2) 1%, transparent 100%);
+}
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <div class="notification-container" id="notifcontainer">
+        <div id="notif1" class="notification">⚠️ There is a problem with the API</div>
+        <div id="notif2" class="notification">⚠️ Log in to <a href="https://discord.gg/7WAmTBSqec">Discord</a> and chat with the website owner to ask for the link</div>
+    </div>
+
+    <div class="container-wrapper">
+    
+    <div class="header">
+        <img src="https://files.catbox.moe/zkmb45.png" style="width: 40px; height: 40px;"/>
+        <strong>Executor</strong>
+        <img src="https://files.catbox.moe/91jtew.png" style="width: 40px; height: 40px;"/>
+    </div>
+
+    <strong class="sidebar" style="top: -1px;">
+        <a class="sidebarbtn" onclick="togglesidebar()"><img src="https://files.catbox.moe/y6ph59.png" alt="arceus"></a>
+        <div class="sidebar-content" id="mysidebar" style="backdrop-filter: blur(10px);">
+            <a href="/api"><strong>Api</strong><img src="https://files.catbox.moe/rrb917.png"></a>
+            <a href="/whatareyoudoinghere" id="home"><strong>Home</strong><img src="https://files.catbox.moe/snd64b.png"></a>
+            <a href="#" class="active" id="executor"><strong>Executor</strong><img src="https://files.catbox.moe/z1t229.png"></a>
+            <a href="/searchscript" id="search-script"><strong>Search Script</strong><img src="https://files.catbox.moe/gd1ej4.png"></a>
+            <a href="https://discord.gg/7WAmTBSqec"><strong>Discord</strong><img src="https://files.catbox.moe/q3wgn9.png"></a>
+            <div class="bottom-sidebar" style="margin-top: 254%;"></div>
+        </div>
+    </strong>
+
+    <div class="container" id="content-container">
+        
+        <div style="width: 100%; height: auto; margin-top: 2%;">
+            <div class="search-bar">
+                <input id="searchInput" onkeyup="searchExecutors()" placeholder="Search Name Executor Or Executor Version" type="text"/>
+                <i class="fas fa-search">
+                </i>
+            </div>
+
+            <div class="osbutton-container">a
+                <button class="osbutton active" id="allButton" onclick="filterExecutors('all')">All</button>
+                <button class="osbutton" id="androidButton" onclick="filterExecutors('android')">Android</button>
+                <button class="osbutton" id="iosButton" onclick="filterExecutors('ios')">Ios</button>
+                <button class="osbutton" id="adminButton" onclick="filterExecutors('admin')">Admin </button>
+            </div>
+        </div>
+
+        <div class="container2" id="android-container">
+
+            <div class="line" id="android-line"><strong style="margin-left: 1%;">Android</strong></div>
+
+            <div class="download-card">
+                <img src="https://files.catbox.moe/ynxoab.png" alt="arceus">
+                <h1>Arceus X</h1>
+                <p><strong>Version: </strong><strong id="arceusandroidversion">Wait</strong></p> 
+                <a href="#" class="download-button" id="arceusandroid">Click Here To Download</a> 
+            </div>
+            
+            <div class="download-card">
+                <img src="https://cdn.discordapp.com/emojis/1293446314117435473.webp?size=96&quality=lossless" alt="Image 2">
+                <h1>Codex</h1>
+                <p><strong>Version: </strong><strong id="CodexAndroidversion">Wait</strong></p>
+                <a href="#" class="download-button" id="CodexAndroid">Click Here To Download</a>
+            </div>
+            
+            <div class="download-card">
+                <img src="https://files.catbox.moe/66cr2c.png" alt="fluxus">
+                <h1>Fluxus</h1>
+                <p><strong>Version: </strong><strong id="fluxusversion">Wait</strong></p>
+                <a href="#" class="download-button" id="fluxus">Click Here To Download</a>
+            </div>
+            
+            <div class="download-card">
+                <img src="https://files.catbox.moe/h8akaz.png" alt="Hydrogen">
+                <h1>Hydrogen</h1>
+                <p><strong>Version: </strong><strong id="hydrogenversion">Wait</strong></p>
+                <a href="#" class="download-button" id="hydrogen">Click Here To Download</a>
+            </div>
+            
+            <div class="download-card">
+                <img src="https://cdn.discordapp.com/emojis/1293446182298976328.webp?size=96&quality=lossless" alt="delta">
+                <h1>Delta</h1>
+                <p><strong>Version: </strong><strong id="deltaandroidversion">Wait</strong></p>
+                <a href="#" class="download-button" id="deltaandroid">Click Here To Download</a>
+            </div>
+            
+            <div class="download-card">
+                <img src="https://cdn.discordapp.com/emojis/1293444835377942599.webp?size=96&quality=lossless" alt="Trigon">
+                <h1>Trigon</h1>
+                <p><strong>Version: </strong><strong id="trigonversion">Wait</strong></p>
+                <a href="#" class="download-button" id="trigon">Click Here To Download</a>
+            </div>
+            
+            <div class="download-card">
+                <img src="https://files.catbox.moe/9enb7p.png" alt="vegax">
+                <h1>Vega X</h1>
+                <p><strong>Version: </strong><strong id="vegaxversion">Wait</strong></p>
+                <a href="#" class="download-button" id="vegax">Click Here To Download</a>
+            </div>
+            
+            <div class="download-card">
+                <img src="https://files.catbox.moe/plcb2q.png" alt="evon">
+                <h1>Evon</h1>
+                <p><strong>Version: </strong><strong id="evonversion">Wait</strong></p>
+                <a href="#" class="download-button" id="evon">Click Here To Download</a>
+            </div>
+            
+            <div class="download-card">
+                <img src="https://files.catbox.moe/nw56uw.png" alt="alysee">
+                <h1>Alysee</h1>
+                <p><strong>Version: </strong><strong id="alyseeversion">Wait</strong></p>
+                <a href="#" class="download-button" id="alysee">Nothing</a>
+            </div>
+            
+            <div class="download-card">
+                <img src="https://files.catbox.moe/hcxvxu.png" alt="valyse">
+                <h1>Valyse</h1>
+                <p><strong>Version: </strong><strong id="valyseversion">Wait</strong></p>
+                <a href="#" class="download-button" id="valyse">Click Here To Download</a>
+            </div>
+            
+            <div class="download-card">
+                <img src="https://files.catbox.moe/8y4et7.png" alt="cubix">
+                <h1>Cubix</h1>
+                <p><strong>Version: </strong><strong id="cubixandroidversion">Wait</strong></p>
+                <a href="#" class="download-button" id="cubixandroid">Click Here To Download</a>
+            </div>
+            
+            <div class="download-card">
+                <img src="https://files.catbox.moe/01j4dg.png" alt="cryptic">
+                <h1>Cryptic</h1>
+                <p><strong>Version: </strong><strong id="crypticversion">Wait</strong></p>
+                <a href="#" class="download-button" id="cryptic">Click Here To Download</a>
+            </div>
+            
+            <div class="download-card">
+                <img src="https://krnl.cat/assets/logo.svg" alt="krnl">
+                <h1>Krnl</h1>
+                <p><strong>Version: </strong><strong id="krnlversion">Wait</strong></p>
+                <a href="#" class="download-button" id="krnl">Click Here To Download</a>
+            </div>
+            
+        </div>
+    
+        <div class="container2" id="ios-container">
+
+            <div class="line" id="ios-line"><strong>Ios</strong></div>
+
+            <div class="download-card">
+                <img src="https://files.catbox.moe/ynxoab.png" alt="arceus">
+                <h1>Arceus X</h1>
+                <p><strong>Version: </strong><strong id="arceusiosversion">Wait</strong></p>
+                <a href="#" class="download-button" id="arceusios">Click Here To Download</a>
+            </div>
+            
+            <div class="download-card">
+                <img src="https://cdn.discordapp.com/emojis/1293446314117435473.webp?size=96&quality=lossless" alt="Image 2">
+                <h1>Codex</h1>
+                <p><strong>Version: </strong><strong id="CodexIosversion">Wait</strong></p>
+                <a href="#" class="download-button" id="codexios">Click Here To Download</a>
+            </div>
+            
+            <div class="download-card">
+                <img src="https://cdn.discordapp.com/emojis/1293446182298976328.webp?size=96&quality=lossless" alt="delta">
+                <h1>Delta</h1>
+                <p><strong>Version: </strong><strong id="deltaiosversion">Wait</strong></p>
+                <a href="#" class="download-button" id="deltaios">Click Here To Download</a>
+            </div>
+            
+            <div class="download-card">
+                <img src="https://files.catbox.moe/8y4et7.png" alt="cubix">
+                <h1>Cubix</h1>
+                <p><strong>Version: </strong><strong id="cubixiosversion">Wait</strong></p>
+                <a href="#" class="download-button" id="cubixios">Click Here To Download</a>
+            </div>
+            
+            <div class="download-card">
+                <img src="https://files.catbox.moe/01j4dg.png" alt="cryptic">
+                <h1>Cryptic</h1>
+                <p><strong>Version: </strong><strong id="crypticiosversion">Wait</strong></p>
+                <a href="#" class="download-button" id="crypticios">Click Here To Download</a>
+            </div>
+            
+        </div>
+        
+        <div class="container2" id="admin-container">
+
+            <div class="line" id="admin-line"><strong>Admin</strong></div>
+
+            <div class="download-card">
+            <img src="https://files.catbox.moe/ynxoab.png" alt="arceus">
+            <h1>Arceus X</h1>
+            <p><strong>Version: ???</strong></p>
+            <a href="" class="download-button" id="arceusadmin">Nothing</a>
+            </div>
+
+            <div class="line" id="line-line"></div>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <div style="display: flex; flex-wrap: wrap; height: auto; width: 250px; justify-content: center; align-items: center;">
+            <button style="width: 45px; height: 45px; background: transparent; display: flex; justify-content: center; align-items: center; border-radius: 100%;"><img src="https://files.catbox.moe/u4a7p3.png" id="Image" style="height: 45px; width: 45px; border-radius: 1000%;"/></button>
+            <strong style="margin-left: 5%;">Made By Zirvius/Saturn</strong>
+        </div>
+        <strong id="id-number" style="color: white; font-family: roboto; margin-left: 25%;"></strong>
+        <a href="https://discord.gg/7WAmTBSqec"><img src="https://files.catbox.moe/q3wgn9.png" style="height: 35px; width: 35px; margin-left: 1420%;"/></a>
+    </div>
+
+    <script>
+
+// sidebar
+function togglesidebar() {
+    var sidebar = document.getElementById("mysidebar")
+    sidebar.classList.toggle("show"); 
+}
+
+window.onclick = function(event) {
+    if (!event.target.closest('.sidebar')) {
+        var sidebars = document.getElementsByClassName("sidebar-content");
+        for (var i = 0; i < sidebars.length; i++) {
+            var opensidebar = sidebars[i];
+            if (opensidebar.classList.contains('show')) {
+                opensidebar.classList.remove('show');
+            }
+        }
+    }
+}
+
+// search executor
+function searchExecutors() {
+    var input, filter, cards, h1, p, i, txtValueH1, txtValueP;
+    input = document.getElementById('searchInput');
+    filter = input.value.toUpperCase();
+    cards = document.getElementsByClassName('download-card');
+
+    var androidContainerVisible = false;
+    var iosContainerVisible = false;
+    var adminContainerVisible = false;
+    var androidLineVisible = false;
+    var iosLineVisible = false;
+    var adminLineVisible = false;
+    var lineLineVisible = false;
+
+    for (i = 0; i < cards.length; i++) {
+        h1 = cards[i].getElementsByTagName('h1')[0];
+        p = cards[i].getElementsByTagName('p')[0];
+        txtValueH1 = h1.textContent || h1.innerText;
+        txtValueP = p.textContent || p.innerText;
+
+        if (txtValueH1.toUpperCase().indexOf(filter) > -1 || txtValueP.toUpperCase().indexOf(filter) > -1) {
+            cards[i].style.display = "";
+            if (cards[i].closest('#android-container')) {
+                androidLineVisible = true;
+                lineLineVisible = true;
+                androidContainerVisible = true;
+            } else if (cards[i].closest('#ios-container')) {
+                iosLineVisible = true;
+                lineLineVisible = true;
+                iosContainerVisible = true;
+            } else if (cards[i].closest('#admin-container')) {
+                adminLineVisible = true;
+                lineLineVisible = true;
+                adminContainerVisible = true;
+            }
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+
+    document.getElementById('android-container').style.display = androidContainerVisible ? "" : "none";
+    document.getElementById('ios-container').style.display = iosContainerVisible ? "" : "none";
+    document.getElementById('admin-container').style.display = adminContainerVisible ? "" : "none";
+    document.getElementById('android-line').style.display = androidLineVisible ? "" : "none";
+    document.getElementById('ios-line').style.display = iosLineVisible ? "" : "none";
+    document.getElementById('admin-line').style.display = adminLineVisible ? "" : "none";
+    document.getElementById('line-line').style.display = lineLineVisible ? "" : "none";
+}
+
+function filterExecutors(type) {
+    var androidContainer = document.getElementById('android-container');
+    var iosContainer = document.getElementById('ios-container');
+    var adminContainer = document.getElementById('admin-container');
+    var allButton = document.getElementById('allButton');
+    var androidButton = document.getElementById('androidButton');
+    var iosButton = document.getElementById('iosButton');
+    var adminButton = document.getElementById('adminButton');
+
+    document.querySelectorAll('.osbutton').forEach(btn => btn.classList.remove('active'));
+
+    if (type === 'all') {
+        allButton.classList.add('active');
+        androidButton.classList.remove('active');
+        iosButton.classList.remove('active');
+        adminButton.classList.remove('active');
+
+        androidContainer.style.display = "";
+        iosContainer.style.display = "";
+        adminContainer.style.display = "";
+    } else if (type === 'android') {
+        allButton.classList.remove('active');
+        androidButton.classList.add('active');
+        iosButton.classList.remove('active');
+        adminButton.classList.remove('active');
+
+        androidContainer.style.display = "";
+        iosContainer.style.display = "none";
+        adminContainer.style.display = "none";
+    } else if (type === 'ios') {
+        allButton.classList.remove('active');
+        androidButton.classList.remove('active');
+        iosButton.classList.add('active');
+        adminButton.classList.remove('active');
+
+        androidContainer.style.display = "none";
+        iosContainer.style.display = "";
+        adminContainer.style.display = "none";
+    } else if (type === 'admin') {
+        allButton.classList.remove('active');
+        androidButton.classList.remove('active');
+        iosButton.classList.remove('active');
+        adminButton.classList.add('active');
+
+        androidContainer.style.display = "none";
+        iosContainer.style.display = "none";
+        adminContainer.style.display = "";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const ids = { 
+        arceusx: "arceusandroid",
+        codex: "CodexAndroid",
+        fluxus: "fluxus",
+        hydrogen: "hydrogen",
+        delta: "deltaandroid",
+        trigon: "trigon",
+        vegax: "vegax",
+        evon: "evon",
+        alysee: "alysee",
+        valyse: "valyse",
+        cubix: "cubixandroid",
+        cryptic: "cryptic",
+        krnl: "krnl"
+    };
+
+    const idsversion = {
+        arceusxversion: "arceusandroidversion",
+        codexversion: "CodexAndroidversion",
+        fluxusversion: "fluxusversion",
+        hydrogenversion: "hydrogenversion",
+        deltaversion: "deltaandroidversion",
+        trigonversion: "trigonversion",
+        vegaxversion: "vegaxversion",
+        evonversion: "evonversion",
+        alyseeversion: "alyseeversion",
+        valyseversion: "valyseversion",
+        cubixversion: "cubixandroidversion",
+        crypticversion: "crypticversion",
+        krnlversion: "krnlversion"
+    };
+
+    const idsios = {
+        arceusx: "arceusios",
+        codex: "codexios",
+        delta: 'deltaios',
+        cubix: 'cubixios',
+        cryptic: 'crypticios'
+    };
+
+    const idsiosversion = {
+        arceusxversion: 'arceusiosversion',
+        codexversion: 'CodexIosversion',
+        deltaversion: 'deltaiosversion',
+        cubixversion: 'cubixiosversion',
+        crypticversion: 'crypticiosversion'
+    };
+
+    const webhookUrl = "https://discordcom/api/webhooks/1364258228652867724/cg_x5bz2v_YXhSydpmDV7p_RxPWBrzSox1483hEwn_mwWuPik0h3RNWBz40zMxZiOBi1";
+
+    Promise.all([
+        fetch("https://api.saturn.web.id/api?os=android")
+            .then(res => {
+                if (!res.ok) throw new Error("404 Android");
+                return res.json();
+            })
+            .then(data => {
+                if (Array.isArray(data)) data = Object.assign({}, ...data);
+                let missingIds = [];
+
+                Object.entries(ids).forEach(([dataKey, htmlId]) => {
+                    if (data[dataKey]) {
+                        const el = document.getElementById(htmlId);
+                        if (el) el.href = data[dataKey];
+                        else missingIds.push(htmlId);
+                    }
+                });
+
+                Object.entries(idsversion).forEach(([dataKey, htmlId]) => {
+                    if (data[dataKey]) {
+                        const el = document.getElementById(htmlId);
+                        if (el) el.textContent = data[dataKey];
+                        else missingIds.push(htmlId);
+                    }
+                });
+
+                if (missingIds.length > 0) {
+                    sendToWebhook("Missing Android IDs", missingIds);
+                }
+            }),
+
+        fetch("https://api.saturn.web.id/api?os=ios")
+            .then(res => {
+                if (!res.ok) throw new Error("404 iOS");
+                return res.json();
+            })
+            .then(data => {
+                if (Array.isArray(data)) data = Object.assign({}, ...data);
+                let missingIds = [];
+
+                Object.entries(idsios).forEach(([dataKey, htmlId]) => {
+                    if (data[dataKey]) {
+                        const el = document.getElementById(htmlId);
+                        if (el) el.href = data[dataKey];
+                        else missingIds.push(htmlId);
+                    }
+                });
+
+                Object.entries(idsiosversion).forEach(([dataKey, htmlId]) => {
+                    if (data[dataKey]) {
+                        const el = document.getElementById(htmlId);
+                        if (el) el.textContent = data[dataKey];
+                        else missingIds.push(htmlId);
+                    }
+                });
+
+                if (missingIds.length > 0) {
+                    sendToWebhook("Missing iOS IDs", missingIds);
+                }
+            })
+    ])
+    .catch(handleError);
+
+    function sendToWebhook(title, missingList) {
+        const payload = {
+            embeds: [{
+                title: title,
+                description: `ID yang tidak ditemukan:\n${missingList.join("\n")}`,
+                color: 0xff0000,
+                timestamp: new Date().toISOString(),
+                footer: {
+                    text: "Error"
+                }
+            }]
+        };
+
+        fetch(webhookUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        }).catch(err => console.error("Gagal kirim webhook:", err));
+    }
+
+    function handleError(error) {
+        console.error("Fetch error:", error);
+        const notif1 = document.getElementById("notif1");
+        const notif2 = document.getElementById("notif2");
+        const notifcontainer = document.getElementById("notifcontainer");
+        
+        setTimeout(() => notifcontainer.classList.add('show'), 1);
+        setTimeout(() => notif1.classList.add("show"), 300);
+        setTimeout(() => notif2.classList.add("show"), 600);
+        setTimeout(() => {
+            notif1.classList.remove("show");
+            notif2.classList.add("move-up");
+        }, 4300);
+        setTimeout(() => notif2.classList.remove("show"), 5500);
+        setTimeout(() => notifcontainer.classList.remove('show'), 6900);
+
+        const payload = {
+            content: `<@926780656753717269> <@877588369775931423> P WOI API ERROR`,
+            embeds: [{
+                title: `API ERRORRRRRR KONTOLLLL`,
+                description: `API ELU ERRORRRRRRRRRRRRRRRRRRRR SIUUUUUUUUUUU`,
+                color: 0xff0000,
+                timestamp: new Date().toISOString(),
+                footer: {
+                    text: "Error"
+                }
+            }]
+        };
+
+        fetch(webhookUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        }).catch(err => console.error("Gagal kirim webhook:", err));
+    }
+});
+
+const imageElement = document.getElementById('Image');
+const img1 = 'https://files.catbox.moe/u4a7p3.png';
+const img2 = 'https://files.catbox.moe/sqslvs.webp';
+
+imageElement.addEventListener('click', () => {
+    imageElement.src = imageElement.src.includes(img1) ? img2 : img1;
+});
+
+
+var script1 = document.createElement('script');
+script1.src = '/source/antiskidcode/index.js'; 
+script1.type = '/text/javascript';
+document.head.appendChild(script1);
+
+var script2 = document.createElement('script');
+script2.src = '/source/gatauahobf/index.js';
+script2.type = 'text/javascript';
+document.head.appendChild(script2);
+
+const script = document.createElement('script');
+script.src = "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js";
+script.onload = function () {
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 100,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#ffffff"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#ffffff"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#fffafa",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": true,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "grab"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 200,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
+
+    document.addEventListener('mousemove', function(e) {
+        var posX = e.clientX;
+        var posY = e.clientY;
+        var particles = window.pJSDom[0].pJS.particles.array;
+
+        var canvas = document.querySelector('#particles-js > canvas');
+        var ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach(function(particle) {
+            var dx = posX - particle.x;
+            var dy = posY - particle.y;
+            var dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 200) {
+                ctx.beginPath();
+                ctx.moveTo(particle.x, particle.y);
+                ctx.lineTo(posX, posY);
+                ctx.strokeStyle = 'rgba(0, 255, 255, ' + (1 - dist / 200) + ')';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+                ctx.closePath();
+            }
+        });
+    });
+};
+
+document.head.appendChild(script);
+    </script>
+</body>
+</html>
